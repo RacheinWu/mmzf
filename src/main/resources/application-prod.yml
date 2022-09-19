@@ -1,0 +1,17 @@
+server:
+  port: 8872
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mzzf?serverTimezone=Asia/Shanghai
+    # 数据库用户名&密码：
+    username: root
+    password: wuyuanjian0
+
+wechat:
+  appid: wx58b3a19a84005b6f
+  appsecret: 1e4e07f76b2373661467826703bf2945
+  token-url: https://api.weixin.qq.com/cgi-bin/token
+  user-info-url: https://api.weixin.qq.com/cgi-bin/user/info
+

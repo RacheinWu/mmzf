@@ -1,0 +1,21 @@
+#banner {
+    height: 120px;
+    background-color: cornflowerblue;
+    width: 100vw;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.container input, select {
+    margin: 30px   140px;
+    height: 90px;
+    font-size: 1.9rem;
+}
+.container .submit {
+    width: 290px;
+    margin: 0 auto  ;
+    height: 50px;
+    font-size: 1.9rem;
+}

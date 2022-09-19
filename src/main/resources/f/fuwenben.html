@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+  //js实现复制到剪贴板，带格式复制
+  function selectElementContents(el) {
+
+    var body = document.body, range, sel;
+
+    if (document.createRange && window.getSelection) {
+
+      range = document.createRange();
+
+      sel = window.getSelection();
+
+      sel.removeAllRanges();
+
+      try {
+
+        range.selectNodeContents(el);
+
+        sel.addRange(range);
+
+      } catch (e) {
+
+        range.selectNode(el);
+
+        sel.addRange(range);
+
+      }
+      document.execCommand("copy");
+      //取消文本选中状态
+      window.getSelection().empty();
+      toastr.success('成功复制到剪贴板！');
+      // alert("成功复制到剪贴板");
+
+
+
+    }
+
+
+</script>
+<body>
+  <div class="tab-pane  fade in active " id="txtrslt"> <!-- fade有淡入淡出的效果-->
+    <span  id ="copyBtn" class="iconfont icon-fuzhi" style="font-size: 14px;margin-left: 45%;color:#4cd3e9;cursor:pointer;" οnclick="selectElementContents( document.getElementById('result') );">一键复制</span>
+    <table id="result">
+      <tbody>
+      <!--表格-->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

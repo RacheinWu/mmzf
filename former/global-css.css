@@ -1,0 +1,18 @@
+*{
+    margin: 0 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    line-height: 1.4285;
+    background-color: #fff;
+}
+html{
+    -webkit-text-size-adjust: 100%;
+}
+div{
+    display: block;
+}
+.box{
+    overflow: hidden;
+}
